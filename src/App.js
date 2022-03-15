@@ -7,7 +7,8 @@ function App() {
 
   var context = { color : 'blue', fontSize : '40px' }
   var posts = "첫 번째"
-  var [product,b] = useState(['데이터1', '데이터2']);
+  var [product,b] = useState(['데이터1', '데이터2', '데이터3']);
+
 
   return (
     <div className="App">
@@ -22,7 +23,17 @@ function App() {
       <h3> { product[0] } </h3>
       <p>3월 16일</p>
       <hr/>
-      </div>
+    </div>
+    <div className = "list">
+      <h3> { product[1] } </h3>
+      <p>3월 16일</p>
+      <hr/>
+    </div>   
+    <div className = "list">
+      <h3> { product[2] } </h3>
+      <p>3월 16일</p>
+      <hr/>
+    </div>  
 
     </div>
   );

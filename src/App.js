@@ -14,7 +14,8 @@ function App() {
     
     </div>
     
-    <h4>Context{a}</h4>
+    <h4 style = {{color : 'blue', fontSize : '40px'}}>Context{a}</h4>
+    
     </div>
   );
 }

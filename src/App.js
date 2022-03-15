@@ -4,7 +4,8 @@ import './App.css';
 function App() {
 
 
-  var a = "하이";
+  var context = { color : 'blue', fontSize : '40px' }
+  
   return (
     <div className="App">
 
@@ -14,7 +15,7 @@ function App() {
     
     </div>
     
-    <h4 style = {{color : 'blue', fontSize : '40px'}}>Context{a}</h4>
+    <h4>{ context }</h4>
     
     </div>
   );

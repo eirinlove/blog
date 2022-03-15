@@ -5,7 +5,7 @@ function App() {
 
 
   var context = { color : 'blue', fontSize : '40px' }
-  
+
   return (
     <div className="App">
 
@@ -15,7 +15,7 @@ function App() {
     
     </div>
     
-    <h4>{ context }</h4>
+    <h4 style = {context}>context</h4>
     
     </div>
   );

@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+
+  var a = "하이";
   return (
     <div className="App">
 
@@ -11,6 +14,7 @@ function App() {
     
     </div>
     
+    <h4>Context{a}</h4>
     </div>
   );
 }

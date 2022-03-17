@@ -17,6 +17,8 @@ function App() {
 
     //b(['데이터1', '데이터4', '데이터3']);
     var newArray = [...product];
+
+    
     newArray[1] = "데이터4";
     b(newArray);
 
@@ -28,6 +30,16 @@ function App() {
     var b = a;
     a[1] = 3;
     console.log (b[1]);
+  }
+
+  function Mdodal(){
+    return ( 
+      <div className="modal">
+      <h2>제목</h2>
+      <p>날짜</p>
+      <p>상세내용</p>
+      </div>
+    )
   }
 
   return (
@@ -57,8 +69,14 @@ function App() {
       <span onClick={() => { dataTest();}}>테스트</span>
       <hr/>
     </div>  
+    <Mdodal></Mdodal>
 
+     
+
+
+      
     </div>
+
   );
 }
 

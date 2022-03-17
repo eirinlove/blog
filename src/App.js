@@ -11,7 +11,7 @@ function App() {
   var posts = "첫 번째"
   var [loadView, chaView] = useState(0);
   var [product,b] = useState(['데이터1', '데이터2', '데이터3']);
-
+  var [modal, modalCha] = useState(false);
 
 
   function dataCha(){
@@ -67,11 +67,16 @@ function App() {
     <div className = "list">
       <h3> { product[2] } </h3>
       <p>3월 16일</p>
-      <span onClick={() => { dataTest();}}>테스트</span>
+      <span onClick={ () =>modalCha(true) }>테스트</span>
       <hr/>
     </div>  
-    <Mdodal>Modal test</Mdodal>
 
+    
+    {
+      modal === true
+    ?<Mdodal>Modal test</Mdodal>
+    : null
+    }
      
 
 

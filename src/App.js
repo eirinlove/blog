@@ -69,7 +69,7 @@ function App() {
       <span onClick={() => { dataTest();}}>테스트</span>
       <hr/>
     </div>  
-    <Mdodal></Mdodal>
+    <Mdodal>Modal test</Mdodal>
 
      
 

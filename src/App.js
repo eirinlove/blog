@@ -13,6 +13,7 @@ function App() {
   var [product,b] = useState(['데이터1', '데이터2', '데이터3']);
 
 
+
   function dataCha(){
 
     //b(['데이터1', '데이터4', '데이터3']);
@@ -43,11 +44,11 @@ function App() {
   }
 
   return (
-    <div className="App">
+  <div className="App">
 
     <div class="black-nav">
 
-    <div> 상단 메뉴 </div>
+      <div> 상단 메뉴 </div>
     
     </div>
     
@@ -75,7 +76,7 @@ function App() {
 
 
       
-    </div>
+  </div>
 
   );
 }

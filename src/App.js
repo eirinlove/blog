@@ -34,15 +34,7 @@ function App() {
     console.log (b[1]);
   }
 
-  function Mdodal(){
-    return ( 
-      <div className="modal">
-      <h2>제목</h2>
-      <p>날짜</p>
-      <p>상세내용</p>
-      </div>
-    )
-  }
+
 
   return (
   <div className="App">
@@ -68,7 +60,7 @@ function App() {
     <div className = "list">
       <h3> { product[2] } </h3>
       <p>3월 16일</p>
-      <span onClick={ () =>modalCha(true) }>테스트</span>
+      <span onClick={ () =>modalCha(!modal) }>테스트</span>
       <hr/>
     </div>  
 
@@ -82,7 +74,7 @@ function App() {
 
     {
       modal === true
-    ?<Mdodal>Modal test</Mdodal>
+    ?<Mdodal product={product}>Modal test</Mdodal>
     : null
     }
      
@@ -92,6 +84,16 @@ function App() {
   </div>
 
   );
+}
+
+function Mdodal(props){
+  return ( 
+    <div className="modal">
+    <h2>제목 { props.product[0] } </h2>
+    <p>날짜</p>
+    <p>상세내용</p>
+    </div>
+  )
 }
 
 export default App;

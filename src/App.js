@@ -11,8 +11,9 @@ function App() {
   var posts = "첫 번째"
   var [loadView, chaView] = useState(0);
   var [product,b] = useState(['데이터1', '데이터2', '데이터3']);
+  var [douproduct,c] = useState(['1번' , '2번',  '3번'])
   var [modal, modalCha] = useState(false);
-
+  var testArray = [1,2,3];
 
   function dataCha(){
 
@@ -71,7 +72,14 @@ function App() {
       <hr/>
     </div>  
 
-    
+    { douproduct.map(function(num){
+
+      return( <div className="list">
+            <h3> { num } </h3>
+            <hr/>
+            </div>)
+    })}
+
     {
       modal === true
     ?<Mdodal>Modal test</Mdodal>
@@ -85,5 +93,5 @@ function App() {
 
   );
 }
-//
+
 export default App;

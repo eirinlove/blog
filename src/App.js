@@ -15,6 +15,8 @@ function App() {
   var [modal, modalCha] = useState(false);
   var testArray = [1,2,3];
 
+  var [setNum, setCha] = useState(0);
+
   function dataCha(){
 
     //b(['데이터1', '데이터4', '데이터3']);
@@ -56,7 +58,10 @@ function App() {
       <span onClick={() => { dataCha(); }}>변경</span>
       <p>3월 16일</p>
       <hr/>
-    </div>   
+    </div>
+    {/* <button onClick={() =>{ setCha(0) }}>first</button>   
+    <button onClick={() =>{ setCha(1) }}>second</button>   
+    <button onClick={() =>{ setCha(2) }}>third</button>    */}
     <div className = "list">
       <h3> { product[2] } </h3>
       <p>3월 16일</p>
@@ -64,17 +69,17 @@ function App() {
       <hr/>
     </div>  
 
-    { douproduct.map(function(num){
+    { douproduct.map(function(num, i){ // 두번째 패러미터 정의.
 
       return( <div className="list">
-            <h3> { num } </h3>
+            <h3 onClick ={()=>{setCha(i)}}> { num } </h3>
             <hr/>
             </div>)
     })}
 
     {
       modal === true
-    ?<Mdodal product={product}>Modal test</Mdodal>
+    ?<Mdodal product={product} setNum={setNum}>Modal test</Mdodal>
     : null
     }
      
@@ -89,7 +94,7 @@ function App() {
 function Mdodal(props){
   return ( 
     <div className="modal">
-    <h2>제목 { props.product[0] } </h2>
+    <h2>제목 { props.product[props.setNum] } </h2>
     <p>날짜</p>
     <p>상세내용</p>
     </div>

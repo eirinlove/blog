@@ -14,8 +14,13 @@ function App() {
   var [douproduct,c] = useState(['1번' , '2번',  '3번'])
   var [modal, modalCha] = useState(false);
   var testArray = [1,2,3];
-
+  var [opArray, opCha] = useState(['기사1', '기사2', '기사3']);
   var [setNum, setCha] = useState(0);
+
+
+
+
+  let [inputTest, inputCha] = useState('');
 
   function dataCha(){
 
@@ -41,7 +46,7 @@ function App() {
   return (
   <div className="App">
 
-    <div class="black-nav">
+    <div className="black-nav">
 
       <div> 상단 메뉴 </div>
     
@@ -71,7 +76,7 @@ function App() {
 
     { douproduct.map(function(num, i){ // 두번째 패러미터 정의.
 
-      return( <div className="list">
+      return( <div className="list" key={i}>
             <h3 onClick ={()=>{setCha(i)}}> { num } </h3>
             <hr/>
             </div>)
@@ -79,14 +84,19 @@ function App() {
 
     {
       modal === true
-    ?<Mdodal product={product} setNum={setNum}>Modal test</Mdodal>
+    ?<Mdodal product={product} setNum={setNum} opArray={opArray}>Modal test</Mdodal>
     : null
     }
      
 
+    {/* {inputTest}
+     <input onChange={(e) => {inputCha(e.target.value)}}/>     */}
 
-    
+
   </div>
+
+
+
 
   );
 }
@@ -94,11 +104,13 @@ function App() {
 function Mdodal(props){
   return ( 
     <div className="modal">
-    <h2>제목 { props.product[props.setNum] } </h2>
+    <h2>제목 { props.opArray[props.setNum] } </h2>
     <p>날짜</p>
     <p>상세내용</p>
     </div>
   )
 }
+
+
 
 export default App;

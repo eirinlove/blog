@@ -87,7 +87,17 @@ function App() {
     ?<Mdodal product={product} setNum={setNum} opArray={opArray}>Modal test</Mdodal>
     : null
     }
-     
+     <div className = "polled">
+
+    <input onChange={(e) => { inputCha(e.target.value)}}/>
+    <button onClick={()=>{ 
+      
+      
+      var arraycopy = [...douproduct];
+      arraycopy.unshift(inputTest);
+      c( arraycopy ) }}>저장</button>
+
+     </div>
 
     {/* {inputTest}
      <input onChange={(e) => {inputCha(e.target.value)}}/>     */}

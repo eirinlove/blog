@@ -16,7 +16,7 @@ function App() {
   var testArray = [1,2,3];
   var [opArray, opCha] = useState(['기사1', '기사2', '기사3']);
   var [setNum, setCha] = useState(0);
-
+  var [setText, TextCha] = ([''])
 
 
 
@@ -122,5 +122,17 @@ function Mdodal(props){
 }
 
 
+
+function Tunnel(props){
+
+return (
+  <div className="hapen">
+
+      <h2> 당신의 현재 상태는 : {setText} 입니다. </h2>
+      { switchA == "ready" ?  setText={setText} : null}
+  </div>
+)
+
+}
 
 export default App;
